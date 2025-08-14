@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOS 2T</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="rounded"></div>
+            <!-- En la sección welcome, envuelve el texto en un span con clase -->
+<div class="welcome text-entrar">
+    <h2><img src="logo.png" alt="MOTOS 2T"></h2>
+    <h4><span class="toggle-text">Haz click aquí si aún no estás registrado.</span></h4>
+    <button id="toggleView">REGISTRO</button>
+</div>
+            
+            <!-- Formulario de LOGIN -->
+            <form class="form-box entrar" id="loginForm" action="#" method="POST">
+                <h1>Entrar</h1>
+                <h3>Inicie sesión!</h3>
+                <div class="container-input">
+              
+                    <input type="text" name="username" placeholder="Usuario..." required>
+                </div>
+                <div class="container-input">
+               
+                    <input type="password" name="password" placeholder="Contraseña..." required>
+                </div>
+                <button type="submit">ENTRAR</button>
+            </form>
+            
+            <!-- Formulario de REGISTRO (oculto inicialmente) -->
+            <form class="form-box cadastrar" id="registerForm" action="#" method="POST" style="display: none;">
+                <h1>Regístrese</h1>
+                <h3>Regístrese para acceder!</h3>
+                <div class="container-input">
+                    
+                    <input type="text" name="reg_username" placeholder="Usuario..." required>
+                </div>
+                <div class="container-input">
+                    
+                    <input type="email" name="reg_email" placeholder="Email..." required>
+                </div>
+                <div class="container-input">
+                    
+                    <input type="password" name="reg_password" placeholder="Contraseña..." required>
+                </div>
+                <button type="submit">REGISTRARSE</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>
