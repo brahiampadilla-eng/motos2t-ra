@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOS 2T - Marcador AR</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #8a2be2;
+        }
+        
+        .marker-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: inline-block;
+        }
+        
+        .instructions {
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+        
+        .step {
+            margin-bottom: 15px;
+            text-align: left;
+            background: rgba(138, 43, 226, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .model-info {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MOTOS 2T - Realidad Aumentada</h1>
+        
+        <div class="instructions">
+            <h2>Instrucciones para ver el modelo 3D:</h2>
+            
+            <div class="step">
+                <strong>Paso 1:</strong> Abre esta página en un dispositivo móvil o imprime el marcador
+            </div>
+            
+            <div class="step">
+                <strong>Paso 2:</strong> Escanea el siguiente marcador Hiro con tu aplicación de RA:
+            </div>
+        </div>
+        
+        <div class="marker-container">
+            <!-- Marcador Hiro para imprimir/escaneo -->
+            <img src="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" 
+                 alt="Marcador Hiro" width="300">
+            <p>Marcador Hiro estándar</p>
+        </div>
+        <a-scene arjs>
+        <a-marker preset="hiro" url="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/data/patt.hiro">
+            <a-entity id="model-1" gltf-model="url(https://sketchfab.com/3d-models/yamaha-rx100-7615fba3db6e4e1ebd0d11eac80a0050) by Kamesh.Hamare (https://sketchfab.com/Kamesh.Hamare) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)" 
+                     scale="0.5 0.5 0.5" position="0 0 0" visible="true">
+            </a-entity>
+        </a-marker>
+        
+        <!-- Marcador personalizado (código de barras) -->
+        <a-marker preset="hiro" value="5">
+            <a-entity id="model-2" gltf-model="url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf)" 
+                     scale="0.2 0.2 0.2" position="0 0.1 0" visible="false">
+            </a-entity>
+        </a-marker>
+        
+        <a-entity camera position="0 0 0"></a-entity>
+    </a-scene>
+        <div class="model-info">
+            <h3>Modelo 3D disponible:</h3>
+            <p>Al escanear este marcador verás nuestra moto en 3D con realidad aumentada</p>
+            <p><strong>Nota:</strong> Necesitas una app de RA como AR Viewer o navegador compatible</p>
+        </div>
+    </div>
+</body>
+</html>
